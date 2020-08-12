@@ -1,0 +1,15 @@
+<h1><%= @flat.name %></h1>
+<p><%= @flat.address%></p>
+<p><i class="fas fa-user-friends"></i><%= @flat.number_of_guests%></p>
+<p><i class="fas fa-dollar-sign"></i><%= @flat.price_per_night%></p>
+<p><%= @flat.description %></p>
+
+
+<%= link_to "Back to all flats", "/flats", class: "btn btn-primary" %>
+<%= link_to "Edit", edit_flat_path(@flat), class: "btn btn-primary" %>
+<%= link_to "Delete",
+     flat_path(@flat),
+     method: :delete,
+     data: { confirm: 'Are you sure you want to delete this flat?'},
+     class: "btn btn-primary" %>
+
